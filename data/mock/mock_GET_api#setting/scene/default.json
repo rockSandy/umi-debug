@@ -1,0 +1,16 @@
+{
+  "sceneName": "default",
+  "data": {
+    "success": true,
+    "resultObject": {
+      "name": "dev001"
+    }
+  },
+  "interfaceUniqId": "13b708eb-7a39-4b7f-ad86-7e412544af92",
+  "contextConfig": {
+    "responseDelay": 0,
+    "responseStatus": 200,
+    "responseHeaders": {}
+  },
+  "uniqId": "1d614d11-b7de-4fe7-8bc1-d14ef865b275"
+}

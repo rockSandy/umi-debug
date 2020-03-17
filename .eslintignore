@@ -1,0 +1,8 @@
+**/.*
+**/node_modules
+**/dist
+**/assets
+**/coverage
+**/reports
+**/__tests__
+typings.d.ts

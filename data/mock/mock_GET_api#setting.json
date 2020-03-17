@@ -1,0 +1,10 @@
+{
+  "protocol": "http",
+  "pathname": "api/setting",
+  "method": "GET",
+  "projectUniqId": "6c753b3a-a012-46a1-8b92-593b6875a60e",
+  "description": "setting",
+  "currentScene": "default",
+  "proxyConfig": {},
+  "uniqId": "13b708eb-7a39-4b7f-ad86-7e412544af92"
+}

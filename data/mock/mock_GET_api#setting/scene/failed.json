@@ -1,0 +1,14 @@
+{
+  "sceneName": "failed",
+  "data": {
+    "success": false,
+    "resultObject": {}
+  },
+  "interfaceUniqId": "13b708eb-7a39-4b7f-ad86-7e412544af92",
+  "contextConfig": {
+    "responseDelay": 0,
+    "responseStatus": 200,
+    "responseHeaders": {}
+  },
+  "uniqId": "f66c99f9-ee7f-4225-8b90-a5ae9b7163f3"
+}

@@ -1,0 +1,97 @@
+{
+  "name": "umi-debug",
+  "version": "1.0.0",
+  "contributors": [
+     "rocksandy <rocksandy@163.com>"
+  ],
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "test": "umi test",
+    "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
+    "lint:css": "stylelint --fix -s less 'src/**/*.less'",
+    
+    "lint:js": "npm run eslint-check && eslint --fix . --ext jsx,js",
+    
+    "lint": "concurrently 'npm:lint:*'",
+    "lint-staged": "lint-staged",
+    "clean": "rm -rf reports screenshots coverage dist",
+    "ci": "npm run clean && npm run lint & npm run test"
+  },
+  "dependencies": {
+    "antd": "^3.19.5",
+    "classnames": "^2.2.6",
+    "core-js": "^3.3.5",
+    "lodash.get": "^4.4.2",
+    "mobx": "^5.14.2",
+    "mobx-react": "^6.1.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    
+    "babel-eslint": "^9.0.0",
+    
+    "@commitlint/config-conventional": "^8.2.0",
+    "commitlint": "^8.2.0",
+    "concurrently": "^5.0.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "eslint": "^5.14.1",
+    "eslint-config-antife": "^2.0.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-compat": "^3.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^3.0.9",
+    "lint-staged": "^7.2.2",
+    "react-test-renderer": "^16.7.0",
+    "stylelint": "^11.0.0",
+    "stylelint-config-antife": "^1.0.1",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
+    "stylelint-order": "^3.1.0",
+    "stylelint-prettier": "^1.1.1",
+    "umi": "^2.13.7",
+    "umi-plugin-datahub": "^3.0.0",
+    "umi-plugin-react": "^1.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    
+    "*.less": [
+      "stylelint --fix -s less",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "ci": {
+    "type": "aci"
+  },
+  "config": {
+    "assets": {
+      "hash": true
+    }
+  }
+}
